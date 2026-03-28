@@ -23,19 +23,37 @@ public class Main {
             System.out.print("Enter choice: ");
 
             choice = sc.nextInt();
+            if (choice < 0 || choice > 5) {
+                System.out.println("Invalid choice! Try again.");
+                continue;
+            }
 
             switch (choice) {
 
                 case 1:
                     System.out.print("Enter Patient ID: ");
                     int pid = sc.nextInt();
+                    if (pid <= 0) {
+                        System.out.println("Invalid Patient ID!");
+                        break;
+                    }
                     sc.nextLine();
 
                     System.out.print("Enter Name: ");
                     String pname = sc.nextLine();
+                    
+                    if (pname.trim().isEmpty()) {
+                       System.out.println("Name cannot be empty!");
+                       break;
+                    }
 
                     System.out.print("Enter Age: ");
                     int age = sc.nextInt();
+
+                    if (age <= 0) {
+                        System.out.println("Invalid age!");
+                        break;
+                    }
                     sc.nextLine();
 
                     System.out.print("Enter Contact: ");
@@ -77,12 +95,12 @@ public class Main {
                         }
                     }
 
-                    if (selectedPatient != null && selectedDoctor != null) {
-                        hm.bookAppointment(new Appointment(aid, selectedPatient, selectedDoctor, time));
-                    } else {
+                    if (selectedPatient == null || selectedDoctor == null) {
                         System.out.println("Invalid Patient or Doctor ID!");
+                        break;
                     }
-                    break;
+                     hm.bookAppointment(new Appointment(aid, selectedPatient, selectedDoctor, time));
+                     break;
 
                 case 4:
                     hm.viewAppointments();
@@ -107,5 +125,3 @@ public class Main {
         sc.close();
     }
 }
-    
-

@@ -10,7 +10,7 @@ public class Main {
         hm.addDoctor(new Doctor(101, "Dr. Sharma", "Cardiology"));
         hm.addDoctor(new Doctor(102, "Dr. Roy", "Dermatology"));
         
-        int choice;
+        int choice =-1;
 
         do {
             System.out.println("\n===== Hospital Management System =====");
@@ -22,7 +22,13 @@ public class Main {
             System.out.println("0. Exit");
             System.out.print("Enter choice: ");
 
-            choice = sc.nextInt();
+            try {
+                choice = sc.nextInt();
+            }catch (Exception e) {
+                System.out.println("Invalid input! Please enter a number.");
+                sc.nextLine();
+                continue;
+            }
             if (choice < 0 || choice > 5) {
                 System.out.println("Invalid choice! Try again.");
                 continue;
@@ -32,7 +38,14 @@ public class Main {
 
                 case 1:
                     System.out.print("Enter Patient ID: ");
-                    int pid = sc.nextInt();
+                    int pid;
+                try {
+                    pid = sc.nextInt();
+                } catch (Exception e) {
+                    System.out.println("Invalid Patient ID!");
+                    sc.nextLine();
+                    break;
+                }
                     if (pid <= 0) {
                         System.out.println("Invalid Patient ID!");
                         break;
@@ -48,7 +61,15 @@ public class Main {
                     }
 
                     System.out.print("Enter Age: ");
-                    int age = sc.nextInt();
+                    
+                    int age;
+                    try {
+                        age = sc.nextInt();
+                    }catch (Exception e) {
+                        System.out.println("Invalid age input!");
+                        sc.nextLine();
+                        break;
+                    }
 
                     if (age <= 0) {
                         System.out.println("Invalid age!");
@@ -68,7 +89,14 @@ public class Main {
 
                 case 3:
                     System.out.print("Enter Appointment ID: ");
-                    int aid = sc.nextInt();
+                    int aid;
+                try {
+                    aid = sc.nextInt();
+                } catch (Exception e) {
+                    System.out.println("Invalid Appointment ID!");
+                    sc.nextLine();
+                    break;
+                }
 
                     System.out.print("Enter Patient ID: ");
                     int patientId = sc.nextInt();

@@ -1,3 +1,4 @@
+//Represents an appointment between a patient and a doctor
 public class Appointment {
     
     int appointmentId;

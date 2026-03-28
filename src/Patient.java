@@ -1,3 +1,4 @@
+//Represents a patient in the hospital
 class Patient extends User {
     int age;
     String contact;

@@ -1,3 +1,4 @@
+//Manages patients, doctors, and appointments
     import java.util.ArrayList;
     public class HospitalManager {
 

@@ -1,3 +1,4 @@
+//Represents a doctor with specialization
 public class Doctor extends User {
     String specialization;
 

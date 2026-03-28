@@ -10,7 +10,7 @@
 
     void addPatient(Patient p) {
         patients.add(p);
-        System.out.println("Patient added successfully!");
+        System.out.println("Patient registered successfully!");
     }
 
     void addDoctor(Doctor d) {
@@ -19,7 +19,7 @@
     }
 
     void viewDoctors() {
-        System.out.println("\n--- Doctor List ---");
+        System.out.println("\n --- Available Doctors ---");
         for (Doctor d : doctors) {
             System.out.println(d.id + " - " + d.name + " (" + d.specialization + ")");
         }
@@ -31,7 +31,7 @@
     }
 
     void viewAppointments() {
-        System.out.println("\n--- Appointments ---");
+        System.out.println("\n --- Scheduled Appointments ---");
         for (Appointment a : appointments) {
             System.out.println(
                 a.appointmentId + " | " +
@@ -46,7 +46,7 @@
         for (Appointment a : appointments) {
             if (a.appointmentId == id) {
                 appointments.remove(a);
-                System.out.println("Appointment cancelled!");
+                System.out.println("Appointment cancelled successfully!");
                 found = true;
                 break;
             }

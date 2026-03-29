@@ -31,15 +31,16 @@
     }
 
     void viewAppointments() {
-        System.out.println("\n --- Scheduled Appointments ---");
-        for (Appointment a : appointments) {
-            System.out.println(
-                a.appointmentId + " | " +
-                a.patient.name + " -> " +
-                a.doctor.name + " at " + a.time
-            );
-        }
+    System.out.println("\n--- Scheduled Appointments ---");
+
+    for (Appointment a : appointments) {
+        System.out.println("Appointment ID: " + a.appointmentId);
+        System.out.println("Patient: " + a.patient.name);
+        System.out.println("Doctor: " + a.doctor.name);
+        System.out.println("Time: " + a.time);
+        System.out.println("---------------------------");
     }
+}
 
     void cancelAppointment(int id) {
         boolean found = false;

@@ -1,0 +1,18 @@
+System Design:
+
+The system is designed using Object-Oriented Programming principles.
+
+Classes:
+- User: Base class containing id and name.
+- Patient: Inherits from User.
+- Doctor: Inherits from User and includes specialization.
+- Appointment: Stores appointment details between patient and doctor.
+- Hospital Manager: Handles all operations like adding patients, booking appointments, etc.
+
+Concepts Used:
+- Abstraction: Classes represent real-world entities.
+- Inheritance: Patient and Doctor inherit from User.
+- Polymorphism: Methods behave differently based on input.
+- Collections: ArrayList used to store data.
+
+The system follows modular design for better maintainability.

@@ -9,6 +9,10 @@ public class Main {
         // Sample doctors
         hm.addDoctor(new Doctor(101, "Dr. Sharma", "Cardiology"));
         hm.addDoctor(new Doctor(102, "Dr. Roy", "Dermatology"));
+        hm.addDoctor(new Doctor(103, "Dr. Sen", "Neurology"));
+        hm.addDoctor(new Doctor(104, "Dr. Gupta", "Orthopedics"));
+        hm.addDoctor(new Doctor(105, "Dr. Das", "Pediatrics"));
+        hm.addDoctor(new Doctor(106, "Dr. Banerjee", "General Medicine"));
         
         int choice =-1;
 
